@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/immodel/mongo-id"
+    "url": "immodel/mongo-id"
   },
   "keywords": [
     "mongo",
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/immodel/mongo-id/issues"
   },
-  "homepage": "https://github.com/immodel/mongo-id"
+  "homepage": "https://github.com/immodel/mongo-id",
+  "directories": {
+    "test": "test"
+  }
 }
