@@ -2,7 +2,7 @@ var objectid = require('objectid');
 
 module.exports = function(model) {
   model
-    .cast(function(value) {
+    .caster(function(value) {
       if(value && objectid.isValid(value))
         value = objectid.toString(value);
       return value;
@@ -10,6 +10,6 @@ module.exports = function(model) {
     .validator(objectid.isValid, 'ObjectID')
     .on('init', function(evt) {
       evt.doc.doc = evt.doc.doc || objectid();
-    });
+    })
     .type('ObjectID');
 };
