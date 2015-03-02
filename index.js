@@ -1,9 +1,15 @@
+var objectid = require('objectid');
+
 module.exports = function(model) {
   model
     .cast(function(value) {
-      if(value && value.isObjectId)
-        value = value.str;
+      if(value && objectid.isValid(value))
+        value = objectid.toString(value);
       return value;
     })
+    .validator(objectid.isValid, 'ObjectID')
+    .on('init', function(evt) {
+      evt.doc.doc = evt.doc.doc || objectid();
+    });
     .type('ObjectID');
 };
