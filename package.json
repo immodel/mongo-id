@@ -1,6 +1,6 @@
 {
   "name": "immodel-mongo-id",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Add BSON Object ID's to your models",
   "main": "index.js",
   "scripts": {
